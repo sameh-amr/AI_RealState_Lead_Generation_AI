@@ -7,6 +7,8 @@ import Testimonials from './components/Testimonials';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import { SITE_TITLE } from './utils/constants';
+import { BubbleChat } from 'flowise-embed-react'
+
 
 function App() {
   useEffect(() => {
@@ -48,6 +50,12 @@ function App() {
         <Testimonials />
         <Contact />
       </main>
+      <div style={{ position: 'fixed', bottom: 24, left: 24, zIndex: 1000 }}>
+        <BubbleChat
+          chatflowid="91319eb7-844a-4d96-9d76-26bb2c5a1595"
+          apiHost="https://flowise-fwh0.onrender.com"
+        />
+      </div>
       <Footer />
     </div>
   );
